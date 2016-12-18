@@ -1,0 +1,111 @@
+function addition () {
+  var champ1 = document.getElementById("plus_1");
+  var champ2 = document.getElementById("plus_2");
+  var champ3 = document.getElementById("plus_sol");
+   var valeur1 = parseFloat(champ1.value); //valeur traitée en texte on change en chiffres
+   var valeur2 = parseFloat(champ2.value);
+   var valide = true;
+    if(isNaN(valeur1)){ //si c'est faux mettre le background en rouge
+      champ1.style.backgroundColor = 'red';
+      valide = false;
+    }
+    else {
+      champ1.style.backgroundColor = '';
+    }
+
+    if(isNaN(valeur2)){
+      champ2.style.backgroundColor = 'red';
+      valide = false;
+    }
+    else {
+      champ2.style.backgroundColor = ''; //'' ou 'initial'
+    }
+
+    if(valide){
+      champ3.value = valeur1 + valeur2;
+    }
+    return valide;
+  }
+
+  function soustraction () {
+    var champ1 = document.getElementById("sous_1");
+    var champ2 = document.getElementById("sous_2");
+    var champ3 = document.getElementById("sous_sol");
+     var valeur1 = parseFloat(champ1.value); //valeur traitée en texte on change en chiffres
+     var valeur2 = parseFloat(champ2.value);
+     var valide = true;
+      if(isNaN(valeur1)){ //si c'est faux mettre le background en rouge
+        champ1.style.backgroundColor = 'red';
+        valide = false;
+      }
+      else {
+        champ1.style.backgroundColor = '';
+      }
+      if(isNaN(valeur2)){
+        champ2.style.backgroundColor = 'red';
+        valide = false;
+      }
+      else {
+        champ2.style.backgroundColor = ''; //'' ou 'initial'
+      }
+
+      if(valide){
+        champ3.value = valeur1 - valeur2;
+      }
+      return valide;
+    }
+
+    function mutliplication () {
+      var champ1 = document.getElementById("mul_1");
+      var champ2 = document.getElementById("mul_2");
+      var champ3 = document.getElementById("mul_sol");
+       var valeur1 = parseFloat(champ1.value); //valeur traitée en texte on change en chiffres
+       var valeur2 = parseFloat(champ2.value);
+       var valide = true;
+        if(isNaN(valeur1)){ //si c'est faux mettre le background en rouge
+          champ1.style.backgroundColor = 'red';
+          valide = false;
+        }
+        else {
+          champ1.style.backgroundColor = '';
+        }
+        if(isNaN(valeur2)){
+          champ2.style.backgroundColor = 'red';
+          valide = false;
+        }
+        else {
+          champ2.style.backgroundColor = ''; //'' ou 'initial'
+        }
+        if(valide){
+          champ3.value = valeur1 * valeur2;
+        }
+        return valide;
+      }
+
+      function division () {
+        var champ1 = document.getElementById("div_1");
+        var champ2 = document.getElementById("div_2");
+        var champ3 = document.getElementById("div_sol");
+         var valeur1 = parseFloat(champ1.value); //valeur traitée en texte on change en chiffres
+         var valeur2 = parseFloat(champ2.value);
+         var valide = true;
+          if(isNaN(valeur1)){ //si c'est faux mettre le background en rouge
+            champ1.style.backgroundColor = 'red';
+            valide = false;
+          }
+          else {
+            champ1.style.backgroundColor = '';
+          }
+          if(isNaN(valeur2) || valeur2 === 0){
+            champ2.style.backgroundColor = 'red';
+            valide = false;
+          }
+          else {
+            champ2.style.backgroundColor = ''; //'' ou 'initial'
+          }
+
+        if(valide){
+          champ3.value = valeur1 / valeur2;
+        }
+        return valide;
+        }
